@@ -388,7 +388,7 @@
         .cap-radar-dot{
             position:absolute;inset:46%;border:1px dashed rgba(200,168,78,.3);border-radius:50%;
         }
-        .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
+        .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 
         .cap-card{
             background:var(--dark-card);border:1px solid var(--dark-border);
@@ -435,11 +435,11 @@
 
         /* ===== PRINCIPLES ===== */
         .princ{padding:100px 0;position:relative}
-        .princ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+        .princ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 
         .princ-card{
             background:var(--dark-card);border:1px solid var(--dark-border);
-            border-radius:10px;padding:32px 22px;text-align:center;
+            border-radius:10px;padding:36px 24px 32px;text-align:center;
             position:relative;overflow:hidden;transition:all .4s ease;
         }
         .princ-card:hover{border-color:rgba(200,168,78,.2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3),0 0 30px rgba(200,168,78,.04)}
@@ -449,17 +449,22 @@
         }
         .princ-card:hover::before{width:60%}
 
-        .princ-num{font-family:'Oswald',sans-serif;font-size:44px;font-weight:700;color:rgba(200,168,78,.05);line-height:1;margin-bottom:8px}
+        .princ-num{
+            font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;
+            color:var(--gold);letter-spacing:4px;text-transform:uppercase;
+            margin-bottom:20px;opacity:.5;
+        }
         .princ-icon{
-            width:54px;height:54px;margin:0 auto 14px;
+            width:56px;height:56px;margin:0 auto 18px;
             display:flex;align-items:center;justify-content:center;
-            border-radius:50%;background:var(--gold-dim);border:1px solid rgba(200,168,78,.08);transition:all .4s;
+            border-radius:12px;background:var(--gold-dim);border:1px solid rgba(200,168,78,.06);transition:all .4s;
         }
         .princ-card:hover .princ-icon{background:rgba(200,168,78,.12);border-color:rgba(200,168,78,.2);transform:scale(1.08)}
-        .princ-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.5}
+        .princ-icon svg{width:28px;height:28px;fill:var(--gold);stroke:none}
+        .princ-icon img{width:32px;height:32px;object-fit:contain}
 
-        .princ-name{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;color:var(--white)}
-        .princ-desc{font-size:13px;color:var(--text-dim);line-height:1.6}
+        .princ-name{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:10px;color:var(--white)}
+        .princ-desc{font-size:13px;color:var(--text-mid);line-height:1.7}
 
         /* ===== HISTORY ===== */
         .history{padding:100px 0;background:var(--dark);position:relative;overflow:hidden}
@@ -744,7 +749,7 @@
                 <div class="cap-desc">Протидія зв'язку та навігації ворога</div>
             </div>
             <div class="cap-card reveal d4">
-                <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M6 2c-.5 0-1 .2-1.3.6L2.3 6.3C2 6.7 2 7.3 2.3 7.7l1 1c.4.4 1 .4 1.4 0L6 7.4l8.6 8.6-1.3 1.3c-.4.4-.4 1 0 1.4l1 1c.4.4 1 .4 1.4 0l3.7-2.4c.4-.3.6-.8.6-1.3 0-.5-.2-1-.6-1.3L8.7 3.3C8.3 2.8 7.5 2.5 7 2.2 6.7 2.1 6.3 2 6 2zM3 19l-1 3 3-1 10-10-2-2L3 19z"/></svg></div>
+                <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="7" y="1" width="10" height="3" rx="1.5"/><rect x="10.5" y="4" width="3" height="9"/><path d="M6 13h12v5c0 3-2.7 5-6 5s-6-2-6-5z"/></svg></div>
                 <div class="cap-name">Інженери</div>
                 <div class="cap-desc">Фортифікація та інженерне забезпечення позицій</div>
             </div>
@@ -773,22 +778,22 @@
         </div>
         <div class="princ-grid">
             <div class="princ-card reveal d1">
-                <div class="princ-num">01</div>
-                <div class="princ-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                <div class="princ-num">Принцип 01</div>
+                <div class="princ-icon"><img src="icon-mvg.png" alt="Точність"></div>
                 <div class="princ-name">Точність</div>
-                <div class="princ-desc">Кожна дія виважена. Кожний ресурс — за призначенням.</div>
+                <div class="princ-desc">Кожна дія виважена. Кожен постріл, кожен ресурс, кожне рішення — за призначенням і вчасно.</div>
             </div>
             <div class="princ-card reveal d2">
-                <div class="princ-num">02</div>
-                <div class="princ-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="princ-num">Принцип 02</div>
+                <div class="princ-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5L12 1z"/></svg></div>
                 <div class="princ-name">Стійкість</div>
-                <div class="princ-desc">Тримаємо позиції незалежно від умов.</div>
+                <div class="princ-desc">Тримаємо позиції незалежно від умов. Там, де стоїмо ми, ворог не пройде.</div>
             </div>
             <div class="princ-card reveal d3">
-                <div class="princ-num">03</div>
-                <div class="princ-icon"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+                <div class="princ-num">Принцип 03</div>
+                <div class="princ-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5L22 9.5l-5 5 1.2 7L12 18l-6.2 3.5L7 14.5l-5-5 7-1L12 2z"/></svg></div>
                 <div class="princ-name">Обов'язок</div>
-                <div class="princ-desc">За Україну, за місто, за людей, за результат.</div>
+                <div class="princ-desc">За Україну, за Одесу, за кожну людину. Служба — не слово, а щоденна дія.</div>
             </div>
         </div>
     </div>
