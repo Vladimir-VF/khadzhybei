@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://pivden.pp.ua/sitemap.xml
+Sitemap: https://pivden.pp.ua/sitemap.xml
